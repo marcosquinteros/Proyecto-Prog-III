@@ -2,26 +2,30 @@ import React from "react";
 import "./App.css";
 import Title from "./components/Title";
 import Alumnos from "./components/Alumnos";
+import Integrantes from "./components/Integrantes";
+import Gracias from "./components/Gracias";
+import Menu from "./components/Menu";
 function App() {
   return (
     <div className="container">
       <header className="header">
         <Title text="Programacion III" />
       </header>
-      <nav className="menu">Menú</nav>
+      <nav className="menu">
+        <Menu />
+      </nav>
       <div className="content-sidebar-wrapper">
         <main className="content">
-          {/* <ul>
-            <li>Mati</li>
-            <li>Paul</li>
-            <li>Santi</li>
-            <li>Marcos</li>
-          </ul> */}
           <Alumnos />
         </main>
-        <aside className="sidebar">Barra Lateral</aside>
+        <aside className="sidebar">
+          <h2>SE BUSCA</h2>
+          <Integrantes />
+        </aside>
       </div>
-      <footer className="footer">Pie de Página</footer>
+      <footer className="footer">
+        <Gracias />
+      </footer>
     </div>
   );
 }
