@@ -12,7 +12,7 @@ const Integrantes = () => {
         {grupo.map((persona) => (
           <div key={persona.id}>
             <img className="integrantes" src={persona.img} alt={persona.nombre} />
-            <p>{persona.nombre}</p>
+            <p >{persona.nombre}</p>
 
           </div>
         ))}

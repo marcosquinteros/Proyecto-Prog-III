@@ -22,20 +22,19 @@ const alumnosComunes = alumnosGeneral.filter((alumno) => alumnosGrupo.some((alum
 const Alumnos = () => {
   return (
     <>
+      <h1 id="titulo">Alumnos</h1>
       <div className="alumnos">
         {alumnosGeneral.map((alumno) => (
           <div className="alumno" key={alumno.id}>
             {alumnosComunes.some((alumnoComun) => alumno.id === alumnoComun.id) ? (
               <>
                 <img className="alumnosGeneral" src={alumno.img} alt={alumno.nombre}></img>
-                <h3 className="alumnoGrupo">{alumno.nombre}</h3>
-                {/* <p className="alumnoGrupo">{alumno.edad}</p> */}
+                <h3 className="alumnoGrupo">{alumno.nombre}</h3>              
               </>
             ) : (
               <>
               <img className="alumnosGeneral" src={alumno.img} alt={alumno.nombre}></img>
-                <h3>{alumno.nombre}</h3>
-                {/* <p>{alumno.edad}</p> */}
+                <h3>{alumno.nombre}</h3>              
               </>
             )}
           </div>
